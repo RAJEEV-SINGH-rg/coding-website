@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            background: linear-gradient(rgb(165, 127, 200),rgb(222, 222, 169))
+        }
+        .container {
+            max-width: 6000px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .question {
+            margin: 15px 0;
+        }
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            display: none;
+            margin-top: 20px;
+        }
+        .answers {
+            margin-top: 20px;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Java Quiz</h2>
+    <form id="quizForm">
+        <div class="question">
+            <p>1. Which of the following is a valid class declaration in Java?</p>
+            <label><input type="radio" name="q1" value="a"> class 1 </label>
+            <label><input type="radio" name="q1" value="b"> class MyClass </label>
+            <label><input type="radio" name="q1" value="c"> class 1MyClass </label>
+        </div>
+
+        <div class="question">
+            <p>2. What is the correct way to declare a main method in Java?</p>
+            <label><input type="radio" name="q2" value="a"> public void main(String[] args) </label>
+            <label><input type="radio" name="q2" value="b"> public static void main(String[] args) </label>
+            <label><input type="radio" name="q2" value="c"> void main(String[] args) </label>
+        </div>
+
+        <div class="question">
+            <p>3. Which keyword is used to prevent a method from being overridden?</p>
+            <label><input type="radio" name="q3" value="a"> private </label>
+            <label><input type="radio" name="q3" value="b"> final </label>
+            <label><input type="radio" name="q3" value="c"> static </label>
+        </div>
+
+        <div class="question">
+            <p>4. What does the 'static' keyword mean in Java?</p>
+            <label><input type="radio" name="q4" value="a"> It means the method belongs to the instance of the class. </label>
+            <label><input type="radio" name="q4" value="b"> It means the method belongs to the class itself, not an instance. </label>
+            <label><input type="radio" name="q4" value="c"> It defines the visibility of the method. </label>
+        </div>
+
+        <div class="question">
+            <p>5. Which of the following is true about the Java String class?</p>
+            <label><input type="radio" name="q5" value="a"> Strings are mutable. </label>
+            <label><input type="radio" name="q5" value="b"> Strings are immutable. </label>
+            <label><input type="radio" name="q5" value="c"> Strings cannot be used in loops. </label>
+        </div>
+
+        <div class="question">
+            <p>6. What is the output of the following code: <code>System.out.println(5 / 2);</code>?</p>
+            <label><input type="radio" name="q6" value="a"> 2 </label>
+            <label><input type="radio" name="q6" value="b"> 2.5 </label>
+            <label><input type="radio" name="q6" value="c"> 2.0 </label>
+        </div>
+
+        <div class="question">
+            <p>7. Which of the following is used to handle exceptions in Java?</p>
+            <label><input type="radio" name="q7" value="a"> try-catch </label>
+            <label><input type="radio" name="q7" value="b"> throw-catch </label>
+            <label><input type="radio" name="q7" value="c"> if-else </label>
+        </div>
+
+        <div class="question">
+            <p>8. What is the default value of a boolean variable in Java?</p>
+            <label><input type="radio" name="q8" value="a"> true </label>
+            <label><input type="radio" name="q8" value="b"> false </label>
+            <label><input type="radio" name="q8" value="c"> null </label>
+        </div>
+
+        <div class="question">
+            <p>9. Which of the following is used to create a new object in Java?</p>
+            <label><input type="radio" name="q9" value="a"> new </label>
+            <label><input type="radio" name="q9" value="b"> create </label>
+            <label><input type="radio" name="q9" value="c"> object </label>
+        </div>
+
+        <div class="question">
+            <p>10. Which method is used to find the length of a string in Java?</p>
+            <label><input type="radio" name="q10" value="a"> length() </label>
+            <label><input type="radio" name="q10" value="b"> getLength() </label>
+            <label><input type="radio" name="q10" value="c"> size() </label>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+    </form>
+
+    <div class="result" id="result">
+        <h3>Your Score: <span id="score"></span>/10</h3>
+        <div class="answers" id="answers"></div>
+    </div>
+</div>
+
+<script>
+    const correctAnswers = {
+        q1: 'b',
+        q2: 'b',
+        q3: 'b',
+        q4: 'b',
+        q5: 'b',
+        q6: 'a',
+        q7: 'a',
+        q8: 'b',
+        q9: 'a',
+        q10: 'a'
+    };
+
+    function checkAnswers() {
+        let score = 0;
+        let answersHtml = '';
+
+        for (let i = 1; i <= 10; i++) {
+            const answer = document.querySelector(`input[name="q${i}"]:checked`);
+            const correctAnswer = correctAnswers[`q${i}`];
+            const selectedAnswer = answer ? answer.value : null;
+            
+            if (selectedAnswer === correctAnswer) {
+                score++;
+            }
+
+           
+            answersHtml += `<p>Question ${i}: `;
+            if (selectedAnswer === correctAnswer) {
+                answersHtml += `<span class="correct">Correct! You selected: ${answer.parentNode.textContent.trim()}</span>`;
+            } else {
+                const selectedText = selectedAnswer ? document.querySelector(`input[name="q${i}"][value="${selectedAnswer}"]`).parentNode.textContent.trim() : 'No answer selected';
+                answersHtml += `<span class="incorrect">Incorrect. You selected: ${selectedText}. Correct answer: ${document.querySelector(`input[name="q${i}"][value="${correctAnswer}"]`).parentNode.textContent.trim()}</span>`;
+            }
+            answersHtml += `</p>`;
+        }
+
+        document.getElementById('score').textContent = score;
+        document.getElementById('answers').innerHTML = answersHtml;
+        document.getElementById('result').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

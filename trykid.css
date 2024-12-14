@@ -1,0 +1,45 @@
+body{
+   background: linear-gradient(rgb(209, 176, 235),rgb(249, 193, 193));
+}
+.topic {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border: 2px double rgb(0, 0, 0);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 5px;
+    background: radial-gradient(rgb(154, 182, 222),rgb(221, 199, 222));
+    box-shadow: 5px 5px 9px rgb(15, 70, 142);
+    font-size: 150%;
+     
+   
+}
+.content
+{
+    border:2px solid black;
+ text-align: center;
+  border-radius: 10px;
+  margin: 8px;
+  margin-left: 200px;
+  margin-right: 200px;
+  padding: 2px;
+  font-size: 130%;
+  background: rgb(247, 243, 243);
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.content:hover{
+    scale: 101%;
+     box-shadow: 2px 2px 50px rgba(106, 182, 227, 0.87); 
+}
+.head{
+    text-align: center; border: 2px solid black; background: radial-gradient(rgb(231, 243, 241),rgb(166, 203, 226));border-radius: 5px; padding: 20px;
+    font-size: 250%;
+    text-shadow: 3px 2px 5px rgb(238, 234, 198);
+    color: rgb(26, 3, 45);
+}
+span{
+    color: rgb(172, 34, 188);
+    font-weight: bold;
+}

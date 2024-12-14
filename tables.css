@@ -1,0 +1,62 @@
+#tab1
+{
+    border: 2px solid black;
+    width: 100%;
+}
+#tab1 th,#tab1 td{
+    border: 2px solid black;
+}
+#tab2{
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+#tab2 th, #tab2 td{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+#tab3{
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+#tab3 th,#tab3 td{
+    border-radius: 15px;
+    border: 2px solid black;
+    
+}
+#tabdot
+{
+    width: 100%;
+    border: 2px solid black;
+    border-style: dotted;
+}
+#tabdot th,#tabdot td
+{
+    border: 2px solid black;
+    border-style: dotted;
+}
+#tabdash{
+    width: 100%;
+    border: 2px solid black;
+    border-style: dotted;
+}
+#tabdash th,#tabdash td
+{
+    border: 2px solid black;
+    border-style: dashed;
+}
+#padded_tab, #padded_tab th,#padded_tab td
+{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 15px;
+}
+#space_tab, #space_tab th,#space_tab td
+{
+    border: 2px solid black;
+}
+#space_tab
+{
+    border-spacing: 15px;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions in Java</title>
+  <link rel="stylesheet" href="ary.css">
+
+  <header>
+    <nav>
+        <ul>
+            <li ><a href="alif.html" >Home</a></li>
+            <li><a href="firstj.html">Java</a></li>
+            <li><a href="#c">C</a></li>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#python">Python</a></li>
+            <li><a href="#python">DSA</a></li>
+        </ul>
+    </nav>
+</header>
+</head>
+<body>
+
+  <div>
+    <h1 class="head">Functions in Java</h1>
+  </div>
+
+  <div class="content">
+    <p>In Java, functions (also known as methods) are blocks of code that perform a specific task. Functions help in breaking down the program into smaller, reusable units. They make the code more organized, readable, and easier to maintain.</p>
+  </div>
+
+  <div class="topic">
+    <h2>1. Defining a Function</h2>
+  </div>
+
+  <div class="content">
+    <p>A function is defined using the following syntax:</p>
+    <pre><code>return_type function_name(parameters) {
+    // body of the function
+}</code></pre>
+    <p>- <strong>return_type</strong>: The type of value the function will return (e.g., <code>int</code>, <code>void</code> for no return value).</p>
+    <p>- <strong>function_name</strong>: The name of the function, which follows Java naming conventions.</p>
+    <p>- <strong>parameters</strong>: The values or variables that the function takes as input (optional).</p>
+    <p>Example:</p>
+    <pre><code>public int add(int a, int b) {
+    return a + b;
+}</code></pre>
+    <p>This function <code>add</code> takes two integers as input and returns their sum.</p>
+  </div>
+
+  <div class="topic">
+    <h2>2. Calling a Function</h2>
+  </div>
+
+  <div class="content">
+    <p>To call a function, you simply use its name, passing the appropriate arguments, and receiving the return value (if any).</p>
+    <p>Example:</p>
+    <pre><code>int result = add(5, 3); // Calls the add function and stores the result (8) in 'result'</code></pre>
+  </div>
+
+  <div class="topic">
+    <h2>3. Function with No Return Value (void)</h2>
+  </div>
+
+  <div class="content">
+    <p>Sometimes, a function does not need to return any value. In such cases, you can use the <code>void</code> return type. These functions are typically used for performing tasks rather than calculating and returning values.</p>
+    <p>Example:</p>
+    <pre><code>public void printMessage() {
+    System.out.println("Hello, Java!");
+}</code></pre>
+    <p>This function <code>printMessage</code> prints a message without returning any value.</p>
+  </div>
+
+  <div class="topic">
+    <h2>4. Function with Parameters</h2>
+  </div>
+
+  <div class="content">
+    <p>Functions can accept parameters, which allow passing values or variables to the function for use within its body.</p>
+    <p>Example:</p>
+    <pre><code>public void greet(String name) {
+    System.out.println("Hello, " + name);
+}</code></pre>
+    <p>In this example, the function <code>greet</code> takes a <code>String</code> parameter <code>name</code> and prints a personalized greeting.</p>
+    <p>Function call example:</p>
+    <pre><code>greet("Alice"); // Outputs: Hello, Alice</code></pre>
+  </div>
+
+  <div class="topic">
+    <h2>5. Return Statement</h2>
+  </div>
+
+  <div class="content">
+    <p>The <code>return</code> statement is used to exit a function and send a value back to the caller. A function that is declared with a return type must use <code>return</code> to provide a value of that type.</p>
+    <p>Example:</p>
+    <pre><code>public int multiply(int a, int b) {
+    return a * b;
+}</code></pre>
+    <p>This function takes two integers as parameters and returns their product.</p>
+    <p>Function call example:</p>
+    <pre><code>int result = multiply(4, 5); // result = 20</code></pre>
+  </div>
+
+  <div class="topic">
+    <h2>6. Method Overloading</h2>
+  </div>
+
+  <div class="content">
+    <p>Method overloading occurs when two or more methods in the same class have the same name but different parameters (either in number or type).</p>
+    <p>Example:</p>
+    <pre><code>public int add(int a, int b) {
+    return a + b;
+}
+
+public double add(double a, double b) {
+    return a + b;
+}</code></pre>
+    <p>In this example, there are two <code>add</code> methods: one that works with integers and another that works with doubles.</p>
+  </div>
+
+  <div class="topic">
+    <h2>7. Recursion</h2>
+  </div>
+
+  <div class="content">
+    <p>Recursion is a concept where a function calls itself in order to solve smaller instances of the same problem. Recursive functions must have a base case to avoid infinite recursion.</p>
+    <p>Example:</p>
+    <pre><code>public int factorial(int n) {
+    if (n == 0) {
+        return 1; // Base case
+    }
+    return n * factorial(n - 1); // Recursive case
+}</code></pre>
+    <p>This function calculates the factorial of a number. For example, <code>factorial(5)</code> will return <code>120</code>.</p>
+  </div>
+
+  <div class="topic">
+    <h2>8. Variable Scope</h2>
+  </div>
+
+  <div class="content">
+    <p>In Java, variables defined inside a function are local to that function, meaning they can only be accessed within that function. Variables defined outside any function (in the class body) are global and can be accessed by any method in the class.</p>
+    <p>Example:</p>
+    <pre><code>public void myFunction() {
+    int localVar = 10; // local variable
+    System.out.println(localVar); // Can be accessed within this function
+}
+
+public void anotherFunction() {
+    // System.out.println(localVar); // Error: localVar cannot be accessed here
+}</code></pre>
+  </div>
+
+  <div class="topic">
+    <h2>9. Conclusion</h2>
+  </div>
+
+  <div class="content">
+    <p>Functions in Java are an essential tool for organizing code and breaking down complex tasks into manageable chunks. Whether it's defining a simple function, handling multiple parameters, or utilizing recursion, mastering functions can greatly improve the structure and efficiency of your programs.</p>
+  </div>
+
+</body>
+</html>

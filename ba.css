@@ -1,0 +1,141 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #111;
+    color: white;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+header {
+    padding: 20px;
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo-container .logo {
+    height: 50px; /* Adjust logo size */
+    margin-right: 20px; /* Space between logo and text */
+}
+
+nav .logo-container h1 {
+    font-size: 2.5rem;
+    color: #00bcd4; /* Optional: Highlight text color */
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin: 0px 20px;
+}
+
+nav .nav-links li a {
+    color: #aaa;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links li a:hover {
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #01191dbe, #540476);
+    color: white;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Cards Section */
+.cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: linear-gradient(135deg, #349bef, #0e91af);
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+.card:hover {
+    background: linear-gradient(135deg, #07883a, #098522);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #aaa;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+header {
+    padding: 20px;
+    background-color: #222;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensure the full width is used */
+}

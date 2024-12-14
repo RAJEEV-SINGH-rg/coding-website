@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operators in Java</title>
+  <link rel="stylesheet" href="ary.css">
+
+  <header>
+    <nav>
+        <ul>
+            <li ><a href="alif.html" >Home</a></li>
+            <li><a href="firstj.html">Java</a></li>
+            <li><a href="#c">C</a></li>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#python">Python</a></li>
+            <li><a href="#python">DSA</a></li>
+        </ul>
+    </nav>
+</header>
+</head>
+<body>
+
+  <div>
+    <h1 class="head">Operators in Java</h1>
+  </div>
+
+  <div class="content">
+    <p>In Java, operators are special symbols used to perform operations on variables and values. Java provides a rich set of operators to perform various tasks like arithmetic, comparison, logical operations, and more.</p>
+  </div>
+
+  <div class="topic">
+    <h2>1. Arithmetic Operators</h2>
+  </div>
+
+  <div class="content">
+    <p>Arithmetic operators are used to perform basic mathematical operations like addition, subtraction, multiplication, and division.</p>
+    <ul>
+      <li><strong>+</strong>: Addition</li>
+      <li><strong>-</strong>: Subtraction</li>
+      <li><strong>*</strong>: Multiplication</li>
+      <li><strong>/</strong>: Division</li>
+      <li><strong>%</strong>: Modulus (remainder of division)</li>
+    </ul>
+    <p>Example:</p>
+    <pre><code>int a = 10, b = 5;
+int sum = a + b; // sum = 15</code></pre>
+  </div>
+
+  <div class="topic">
+    <h2>2. Relational Operators</h2>
+  </div>
+
+  <div class="content">
+    <p>Relational operators are used to compare two values. These operators return a boolean value (<code>true</code> or <code>false</code>).</p>
+    <ul>
+      <li><strong>==</strong>: Equal to</li>
+      <li><strong>!=</strong>: Not equal to</li>
+      <li><strong>&gt;</strong>: Greater than</li>
+      <li><strong>&lt;</strong>: Less than</li>
+      <li><strong>&gt;=</strong>: Greater than or equal to</li>
+      <li><strong>&lt;=</strong>: Less than or equal to</li>
+    </ul>
+    <p>Example:</p>
+    <pre><code>int a = 10, b = 5;
+boolean result = a > b; // result = true</code></pre>
+  </div>
+
+  <div class="topic">
+    <h2>3. Logical Operators</h2>
+  </div>
+
+  <div class="content">
+    <p>Logical operators are used to combine multiple boolean expressions. They return a boolean value.</p>
+    <ul>
+      <li><strong>&&</strong>: Logical AND</li>
+      <li><strong>||</strong>: Logical OR</li>
+      <li><strong>!</strong>: Logical NOT</li>
+    </ul>
+    <p>Example:</p>
+    <pre><code>boolean a = true, b = false;
+boolean result = a && b; // result = false</code></pre>
+  </div>
+
+  <div class="topic">
+    <h2>4. Assignment Operators</h2>
+  </div>
+
+  <div class="content">
+    <p>Assignment operators are used to assign values to variables. The most common assignment operator is the <code>=</code> operator, but there are others that combine assignment with arithmetic operations.</p>
+    <ul>
+      <li><strong>=</strong>: Simple assignment</li>
+      <li><strong>+=</strong>: Add and assign</li>
+      <li><strong>-=</strong>: Subtract and assign</li>
+      <li><strong>*=</strong>: Multiply and assign</li>
+      <li><strong>/=</strong>: Divide and assign</li>
+      <li><strong>%=</strong>: Modulus and assign</li>
+    </ul>
+    <p>Example:</p>
+    <pre><code>int a = 5;
+a += 3; // a = 8</code></pre>
+  </div>
+
+  <div class="topic">
+    <h2>5. Unary Operators</h2>
+  </div>
+
+  <div class="content">
+    <p>Unary operators are used to perform operations on a single operand. These include increment, decrement, and negation.</p>
+    <ul>
+      <li><strong>++</strong>: Increment (increases the value by 1)</li>
+      <li><strong>--</strong>: Decrement (decreases the value by 1)</li>
+      <li><strong>+</strong>: Unary plus (indicates positive value)</li>
+      <li><strong>-</strong>: Unary minus (negates the value)</li>
+      <li><strong>!</strong>: Logical NOT (inverts the value of a boolean expression)</li>
+    </ul>
+    <p>Example:</p>
+    <pre><code>int a = 5;
+a++; // a = 6</code></pre>
+  </div>
+
+  <div class="topic">
+    <h2>6. Ternary Operator</h2>
+  </div>
+
+  <div class="content">
+    <p>The ternary operator is a shorthand for an <code>if-else</code> statement. It is used to evaluate a condition and return one of two values depending on whether the condition is <code>true</code> or <code>false</code>.</p>
+    <pre><code>condition ? value_if_true : value_if_false;</code></pre>
+    <p>Example:</p>
+    <pre><code>int a = 10, b = 5;
+int result = (a > b) ? a : b; // result = 10</code></pre>
+  </div>
+
+  <div class="topic">
+    <h2>7. Bitwise Operators</h2>
+  </div>
+
+  <div class="content">
+    <p>Bitwise operators are used to perform operations on the individual bits of integer values.</p>
+    <ul>
+      <li><strong>&amp;</strong>: Bitwise AND</li>
+      <li><strong>|</strong>: Bitwise OR</li>
+      <li><strong>^</strong>: Bitwise XOR</li>
+      <li><strong>~</strong>: Bitwise NOT</li>
+      <li><strong>&lt;&lt;</strong>: Left shift</li>
+      <li><strong>&gt;&gt;</strong>: Right shift</li>
+      <li><strong>&gt;&gt;&gt;</strong>: Unsigned right shift</li>
+    </ul>
+    <p>Example:</p>
+    <pre><code>int a = 5, b = 3;
+int result = a & b; // result = 1</code></pre>
+  </div>
+
+  <div class="topic">
+    <h2>8. Instanceof Operator</h2>
+  </div>
+
+  <div class="content">
+    <p>The <code>instanceof</code> operator is used to check whether an object is an instance of a specific class or subclass.</p>
+    <pre><code>object instanceof ClassName;</code></pre>
+    <p>Example:</p>
+    <pre><code>String str = "Hello";
+boolean result = str instanceof String; // result = true</code></pre>
+  </div>
+
+  <div class="topic">
+    <h2>9. Conclusion</h2>
+  </div>
+
+  <div class="content">
+    <p>In summary, Java provides a wide variety of operators for performing different tasks. Whether you are doing basic arithmetic, logical comparisons, or working with bits, understanding these operators is essential for writing efficient Java code. By mastering operators, you can greatly improve your programming skills in Java.</p>
+  </div>
+
+</body>
+</html>

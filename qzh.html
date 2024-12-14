@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            background: linear-gradient(rgb(165, 127, 200),rgb(222, 222, 169))
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .question {
+            margin: 15px 0;
+        }
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            display: none;
+            margin-top: 20px;
+        }
+        .answers {
+            margin-top: 20px;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>HTML Quiz</h2>
+    <form id="quizForm">
+        <div class="question">
+            <p>1. What does HTML stand for?</p>
+            <label><input type="radio" name="q1" value="a"> Hyper Text Markup Language </label>
+            <label><input type="radio" name="q1" value="b"> Home Tool Markup Language </label>
+            <label><input type="radio" name="q1" value="c"> Hyperlinks and Text Markup Language </label>
+        </div>
+
+        <div class="question">
+            <p>2. What is the correct HTML element to display a header?</p>
+            <label><input type="radio" name="q2" value="a"> &lt;header&gt; </label>
+            <label><input type="radio" name="q2" value="b"> &lt;h1&gt; </label>
+            <label><input type="radio" name="q2" value="c"> &lt;head&gt; </label>
+        </div>
+
+        <div class="question">
+            <p>3. Which tag is used to create a hyperlink in HTML?</p>
+            <label><input type="radio" name="q3" value="a"> &lt;a&gt; </label>
+            <label><input type="radio" name="q3" value="b"> &lt;link&gt; </label>
+            <label><input type="radio" name="q3" value="c"> &lt;href&gt; </label>
+        </div>
+
+        <div class="question">
+            <p>4. What does the &lt;img&gt; tag do in HTML?</p>
+            <label><input type="radio" name="q4" value="a"> Embeds an image in the webpage </label>
+            <label><input type="radio" name="q4" value="b"> Displays a video </label>
+            <label><input type="radio" name="q4" value="c"> Adds a table </label>
+        </div>
+
+        <div class="question">
+            <p>5. Which attribute is used to specify the URL in the &lt;a&gt; tag?</p>
+            <label><input type="radio" name="q5" value="a"> href </label>
+            <label><input type="radio" name="q5" value="b"> src </label>
+            <label><input type="radio" name="q5" value="c"> alt </label>
+        </div>
+
+        <div class="question">
+            <p>6. How do you create a numbered list in HTML?</p>
+            <label><input type="radio" name="q6" value="a"> &lt;ul&gt; </label>
+            <label><input type="radio" name="q6" value="b"> &lt;ol&gt; </label>
+            <label><input type="radio" name="q6" value="c"> &lt;li&gt; </label>
+        </div>
+
+        <div class="question">
+            <p>7. What is the correct HTML tag for inserting a line break?</p>
+            <label><input type="radio" name="q7" value="a"> &lt;br&gt; </label>
+            <label><input type="radio" name="q7" value="b"> &lt;break&gt; </label>
+            <label><input type="radio" name="q7" value="c"> &lt;lb&gt; </label>
+        </div>
+
+        <div class="question">
+            <p>8. How do you add a comment in HTML?</p>
+            <label><input type="radio" name="q8" value="a"> &lt;!-- This is a comment --&gt; </label>
+            <label><input type="radio" name="q8" value="b"> &lt;comment&gt; This is a comment &lt;/comment&gt; </label>
+            <label><input type="radio" name="q8" value="c"> &lt;# This is a comment #&gt; </label>
+        </div>
+
+        <div class="question">
+            <p>9. What tag is used to define an unordered list in HTML?</p>
+            <label><input type="radio" name="q9" value="a"> &lt;ul&gt; </label>
+            <label><input type="radio" name="q9" value="b"> &lt;ol&gt; </label>
+            <label><input type="radio" name="q9" value="c"> &lt;li&gt; </label>
+        </div>
+
+        <div class="question">
+            <p>10. What is the correct HTML tag for a text input field?</p>
+            <label><input type="radio" name="q10" value="a"> &lt;input&gt; </label>
+            <label><input type="radio" name="q10" value="b"> &lt;textfield&gt; </label>
+            <label><input type="radio" name="q10" value="c"> &lt;textbox&gt; </label>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+    </form>
+
+    <div class="result" id="result">
+        <h3>Your Score: <span id="score"></span>/10</h3>
+        <div class="answers" id="answers"></div>
+    </div>
+</div>
+
+<script>
+    const correctAnswers = {
+        q1: 'a',
+        q2: 'b',
+        q3: 'a',
+        q4: 'a',
+        q5: 'a',
+        q6: 'b',
+        q7: 'a',
+        q8: 'a',
+        q9: 'a',
+        q10: 'a'
+    };
+
+    function checkAnswers() {
+        let score = 0;
+        let answersHtml = '';
+
+        for (let i = 1; i <= 10; i++) {
+            const answer = document.querySelector(`input[name="q${i}"]:checked`);
+            const correctAnswer = correctAnswers[`q${i}`];
+            const selectedAnswer = answer ? answer.value : null;
+            
+            if (selectedAnswer === correctAnswer) {
+                score++;
+            }
+
+           
+            answersHtml += `<p>Question ${i}: `;
+            if (selectedAnswer === correctAnswer) {
+                answersHtml += `<span class="correct">Correct! You selected: ${answer.parentNode.textContent.trim()}</span>`;
+            } else {
+                const selectedText = selectedAnswer ? document.querySelector(`input[name="q${i}"][value="${selectedAnswer}"]`).parentNode.textContent.trim() : 'No answer selected';
+                answersHtml += `<span class="incorrect">Incorrect. You selected: ${selectedText}. Correct answer: ${document.querySelector(`input[name="q${i}"][value="${correctAnswer}"]`).parentNode.textContent.trim()}</span>`;
+            }
+            answersHtml += `</p>`;
+        }
+
+        document.getElementById('score').textContent = score;
+        document.getElementById('answers').innerHTML = answersHtml;
+        document.getElementById('result').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

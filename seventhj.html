@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditional Statements in Java</title>
+  <link rel="stylesheet" href="ary.css">
+
+  <header>
+    <nav>
+        <ul>
+            <li ><a href="alif.html" >Home</a></li>
+            <li><a href="firstj.html">Java</a></li>
+            <li><a href="#c">C</a></li>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#python">Python</a></li>
+            <li><a href="#python">DSA</a></li>
+        </ul>
+    </nav>
+</header>
+</head>
+<body>
+
+  <div>
+    <h1 class="head">Conditional Statements in Java</h1>
+  </div>
+
+  <div class="content">
+    <p>In Java, conditional statements are used to perform different actions based on different conditions. They allow your program to make decisions and control the flow of execution depending on whether a condition is true or false.</p>
+  </div>
+
+  <div class="topic">
+    <h2>1. If Statement</h2>
+  </div>
+
+  <div class="content">
+    <p>The <code>if</code> statement is used to test a condition. If the condition is true, the code inside the block is executed. If it is false, the code is skipped.</p>
+    <p>Syntax:</p>
+    <pre><code>if (condition) {
+  // code to be executed if condition is true
+}</code></pre>
+    <p>Example:</p>
+    <pre><code>int a = 10;
+if (a > 5) {
+    System.out.println("a is greater than 5");
+}</code></pre>
+  </div>
+
+  <div class="topic">
+    <h2>2. If-Else Statement</h2>
+  </div>
+
+  <div class="content">
+    <p>The <code>if-else</code> statement is used when you want to execute one block of code if the condition is true, and another block if the condition is false.</p>
+    <p>Syntax:</p>
+    <pre><code>if (condition) {
+  // code to be executed if condition is true
+} else {
+  // code to be executed if condition is false
+}</code></pre>
+    <p>Example:</p>
+    <pre><code>int a = 3;
+if (a > 5) {
+    System.out.println("a is greater than 5");
+} else {
+    System.out.println("a is less than or equal to 5");
+}</code></pre>
+  </div>
+
+  <div class="topic">
+    <h2>3. Else-If Ladder</h2>
+  </div>
+
+  <div class="content">
+    <p>The <code>else-if</code> ladder is used when you need to check multiple conditions. It allows you to test more than two conditions.</p>
+    <p>Syntax:</p>
+    <pre><code>if (condition1) {
+  // code if condition1 is true
+} else if (condition2) {
+  // code if condition2 is true
+} else {
+  // code if all conditions are false
+}</code></pre>
+    <p>Example:</p>
+    <pre><code>int a = 10;
+if (a > 20) {
+    System.out.println("a is greater than 20");
+} else if (a > 5) {
+    System.out.println("a is greater than 5 but less than or equal to 20");
+} else {
+    System.out.println("a is 5 or less");
+}</code></pre>
+  </div>
+
+  <div class="topic">
+    <h2>4. Switch Statement</h2>
+  </div>
+
+  <div class="content">
+    <p>The <code>switch</code> statement is used when you need to select one of many blocks of code to be executed. It is an alternative to using multiple <code>if-else</code> statements when there are several conditions to check.</p>
+    <p>Syntax:</p>
+    <pre><code>switch (variable) {
+  case value1:
+    // code if variable == value1
+    break;
+  case value2:
+    // code if variable == value2
+    break;
+  default:
+    // code if variable does not match any case
+}</code></pre>
+    <p>Example:</p>
+    <pre><code>int day = 3;
+switch (day) {
+    case 1:
+        System.out.println("Monday");
+        break;
+    case 2:
+        System.out.println("Tuesday");
+        break;
+    case 3:
+        System.out.println("Wednesday");
+        break;
+    default:
+        System.out.println("Invalid day");
+}</code></pre>
+  </div>
+
+  <div class="topic">
+    <h2>5. Ternary Operator</h2>
+  </div>
+
+  <div class="content">
+    <p>The <code>ternary operator</code> is a shorthand for the <code>if-else</code> statement. It evaluates a condition and returns one of two values depending on whether the condition is true or false.</p>
+    <p>Syntax:</p>
+    <pre><code>condition ? value_if_true : value_if_false;</code></pre>
+    <p>Example:</p>
+    <pre><code>int a = 10, b = 5;
+int result = (a > b) ? a : b; // result = 10</code></pre>
+  </div>
+
+  <div class="topic">
+    <h2>6. Conclusion</h2>
+  </div>
+
+  <div class="content">
+    <p>Conditional statements are an essential part of programming, allowing the program to make decisions based on different conditions. Java provides a variety of ways to control the flow of execution using <code>if</code>, <code>if-else</code>, <code>else-if</code> ladder, and the <code>switch</code> statement. Mastering conditional statements is crucial to writing efficient and logical Java programs.</p>
+  </div>
+
+</body>
+</html>

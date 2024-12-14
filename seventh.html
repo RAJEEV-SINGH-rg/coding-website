@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <title>Links in HTML</title>
+    <link rel="stylesheet" href="ary.css">
+
+    <header>
+        <nav>
+            <ul>
+                <li ><a href="alif.html" >Home</a></li>
+                <li><a href="firstj.html">Java</a></li>
+                <li><a href="#c">C</a></li>
+                <li><a href="#html">HTML</a></li>
+                <li><a href="#python">Python</a></li>
+                <li><a href="#python">DSA</a></li>
+            </ul>
+        </nav>
+    </header>
+</head>
+    <body>
+        <h1 class="head">Links</h1> <br>
+        <p class="topic"><b>✦To insert Links use &lt a href="url"&gt Link text &lt/a&gt</b></p>
+        <p class="content">✦1. <span>href</span> attribute indicates link destination.
+            <br><span>target</span> attribute specifies where the link will open, by default it is <b>_self</b> which means the link will open in same window.<br>It can have following values
+            <ul class="content"><li>_self: Default.opens link in same window</li>
+                <li>_blank: opens link in another tab/window</li>
+                <li>_parent: opens link in parent frame</li>
+                <li>_top: opens link in full body of window</li>
+            </ul>
+            
+            <p class="content">
+                ✦2. Use <span>mailto</span>: inside the href attribute to create a link that opens the user's email program (to let them send a new email):
+            <br><a href="mailto: example@gmail.com">Mail me!</a></p></p>
+           <p class="content">
+            ✦3. Using button as a link requires javascript<br><br>
+            <div style="align-items: center;text-align: center;"><button onclick="document.location='first.html'">Home Page</button>
+            </div></p>
+            
+            <p class="content">
+                ✦4. The title attribute specifies extra information about an element.
+            <a href="first.html" title="Click to go to home page"><br>Put mouse on me</a></p>
+            <p class="content">
+                ✦5. Use img element inside &lta&gt to use image as a link.<br>
+            <a href="first.html"><img src="grey.png"></a>
+            Click on the image to go to home page</p>
+            <!-- Use the <a> element to define a link
+Use the href attribute to define the link address
+Use the target attribute to define where to open the linked document
+Use the <img> element (inside <a>) to use an image as a link
+Use the mailto: scheme inside the href attribute to create a link that opens the user's email program
+ -->
+        </p>
+        <!-- The default colors of link have been modified using css 
+        An unvisited link is underlined and blue
+        A visited link is underlined and purple
+        An active link is underlined and red-->
+        <p class="content">
+            ✦6. Links can be colored using CSS.
+        <a href="seventh2.html">Example</a>
+        <br><br></p>
+        <p class="content">
+            ✦7.Links can be styled as buttons using CSS.
+        <a href="seventh3.html">Example</a></p>
+        
+        <p class="content">
+            ✦8.When the page is too long, bookmarks can be useful.<br>Use the id attribute (id="value") to define bookmarks in a page<br>
+        and, Use the href attribute (href="#value") to link to the bookmark
+        </p>
+    </body>
+</head>
